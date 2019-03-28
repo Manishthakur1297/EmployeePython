@@ -10,3 +10,4 @@ fe|34||
 erdf|45||
 qwertyuiop|34|8000|Clerk
 MMMMMMHHHH|34|8000|Clerk
+rtgtg6t|60|25000|Programmer

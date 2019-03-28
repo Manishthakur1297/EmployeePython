@@ -1,13 +1,25 @@
+from InvalidAgeException import *;
+from numpy import *;
+import numpy as np;
+
 class Emp:
     count = 0
+    
     def __init__(self, salary, designation):
         self.name = input("Enter Name : ")
-        self.age = int(input("Enter Age : "))
+        try:
+            self.age = int(input("Enter Age : "))
+            if(self.age<21 or self.age>60):
+                raise InvalidAgeException
+        except (InvalidAgeException, ValueError):
+            print("Enter number only between [21-60].....")
+            self.age = InvalidAgeException.readAge()
         self.salary = salary
         self.designation = designation
-        f = open("employee.txt", "a")
-        f.write(self.name+"|"+str(self.age)+"|"+str(self.salary)+"|"+self.designation+"\n")
-        f.close()
+        #np.append(EmpMain.arr,[Emp(self.name,self.age,self.salary, self.designation)])
+        # f = open("employee.txt", "a")
+        # f.write(self.name+"|"+str(self.age)+"|"+str(self.salary)+"|"+self.designation+"\n")
+        # f.close()
         Emp.count+=1
 
 
@@ -26,12 +38,18 @@ class Clerk(Emp):
     def __init__(self):
         super().__init__(8000,"Clerk")
 
+    def raiseSalary():
+        return 
+
 
 class Programmer(Emp):
     def __init__(self):
-        super().__init__(self,25000,"Programmer")
+        super().__init__(25000,"Programmer")
 
 class Manager(Emp):
     def __init__(self):
-        super().__init__(self,80000,"Manager")
+        super().__init__(80000,"Manager")
 
+
+class DuckType(self,obj):
+    obj.raiseSalary(obj)
