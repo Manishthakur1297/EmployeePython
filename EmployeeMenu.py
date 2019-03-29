@@ -62,7 +62,8 @@ def main():
             
             displayEmp(arr)
         elif(mChoice==3):
-            pass
+            for i in arr:
+                DuckType.raiseAllSalary(i)
         else:
             break
 

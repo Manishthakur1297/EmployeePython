@@ -38,18 +38,25 @@ class Clerk(Emp):
     def __init__(self):
         super().__init__(8000,"Clerk")
 
-    def raiseSalary():
-        return 
+    def raiseSalary(self):
+        self.salary = self.salary+2000
 
 
 class Programmer(Emp):
     def __init__(self):
         super().__init__(25000,"Programmer")
+        
+    def raiseSalary(self):
+        self.salary = self.salary+5000
 
 class Manager(Emp):
     def __init__(self):
         super().__init__(80000,"Manager")
 
+    def raiseSalary(self):
+        self.salary = self.salary+10000
 
-class DuckType(self,obj):
-    obj.raiseSalary(obj)
+
+class DuckType:
+    def raiseAllSalary(obj):
+        obj.raiseSalary()
