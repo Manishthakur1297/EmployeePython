@@ -6,7 +6,7 @@ import numpy as np;
 
 def displayEmp(a):
     for i in a:
-         print("Name : "+i.name+"\nAge : "+str(i.age) + "\nSalary : "+str(i.salary) + "\nDesignation : "+i.designation)
+         print("Name : "+i.name+"\nAge : "+str(i.age) + "\nSalary : "+str(i.salary) + "\nDesignation : "+i.designation+"\n")
 
 
 def main():
